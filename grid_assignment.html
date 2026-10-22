@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { margin: 0; }
+
+   .grid {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-areas:
+      "header header header"
+      "nav    article    article"
+      "ads    article article"
+      "footer footer footer";
+    min-height: 100vh;
+    gap: 10px;
+  }
+
+  .grid > *
+   { padding: 20px; }
+
+  header{
+     grid-area: header; 
+     background:cadetblue;
+        }
+
+  nav{
+     grid-area: nav;     
+     background: green; 
+     }
+  article{
+     grid-area: article;
+      background: mediumseagreen; 
+    }
+  .ads{ 
+    grid-area: ads;  
+    background: aquamarine; 
+    }
+  footer{ 
+    grid-area: footer;  
+    background: blanchedalmond; 
+    }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <header>Header</header>
+    <nav>Nav</nav>
+    <article>Article</article>
+    <aside class="ads">Ads</aside>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>
